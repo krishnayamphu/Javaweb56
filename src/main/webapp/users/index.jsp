@@ -2,10 +2,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@include file="head.jsp"%>
     <title>Users</title>
 </head>
 <body>
-<table border="1">
+<%@include file="nav.jsp"%>
+<table>
     <tr>
         <th>ID</th>
         <th>Username</th>
@@ -18,11 +20,14 @@
             <td>${user.username}</td>
             <td>${user.password}</td>
             <td>
-                <a href="user-edit?id=${user.id}">Edit</a>
-                <form action="users" method="post">
-                    <input type="hidden" name="id" value="${user.id}">
-                    <button>Delete</button>
-                </form>
+                <div class="action-group">
+                    <a href="user-edit?id=${user.id}">Edit</a>
+                    <form action="users" method="post">
+                        <input type="hidden" name="id" value="${user.id}">
+                        <button>Delete</button>
+                    </form>
+                </div>
+
             </td>
         </tr>
     </c:forEach>

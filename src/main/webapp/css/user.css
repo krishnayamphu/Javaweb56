@@ -1,0 +1,64 @@
+*{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+nav{
+    background-color: aquamarine;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+nav a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 20px;
+    color: #2c2c2c;
+}
+nav a:hover{
+    background-color: #cccccc;
+    color: black;
+}
+table{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+table th, table td{
+    border: 1px solid darkgrey;
+    padding: 5px 10px;
+}
+table .action-group{
+    display: flex;
+    justify-content: center;
+}
+.action-group a{
+    border: 1px solid darkgrey;
+    padding: 2px 10px;
+    border-radius: 2px;
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.action-group form{
+    width: auto;
+    display: inline-block;
+    margin: 0;
+}
+form{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form input{
+    width: 100%;
+    padding: 5px 10px;
+}
+form button{
+    padding: 3px 6px;
+}

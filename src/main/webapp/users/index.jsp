@@ -22,10 +22,23 @@
             <td>
                 <div class="action-group">
                     <a href="user-edit?id=${user.id}">Edit</a>
-                    <form action="users" method="post">
-                        <input type="hidden" name="id" value="${user.id}">
-                        <button>Delete</button>
-                    </form>
+                    <button onclick="showDialog()">Delete</button>
+                </div>
+
+                <div id="overlay" class="card-overlay">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Are you sure delete this item?</p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="users" method="post">
+                                <input type="hidden" name="id" value="${user.id}">
+                                <button type="submit">Confirm</button>
+                                <button onclick="closeDialog()" type="button">Cancel</button>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
 
             </td>
@@ -33,5 +46,15 @@
     </c:forEach>
 </table>
 
+
+
+<script>
+    function showDialog(){
+        document.getElementById("overlay").style.display="flex";
+    }
+    function closeDialog(){
+        document.getElementById("overlay").style.display="none";
+    }
+</script>
 </body>
 </html>

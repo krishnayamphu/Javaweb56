@@ -62,3 +62,38 @@ form input{
 form button{
     padding: 3px 6px;
 }
+
+/* card-overlay */
+.card-overlay{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.card-overlay .card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+.card-overlay .card-footer{
+    padding-top: 30px;
+}
+.card-footer form{
+    display: flex;
+    flex-direction: row;
+}
+.card-footer form button{
+    margin: 0 10px;
+    background-color: darkgrey;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+.card-footer form button[type='submit']{
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
